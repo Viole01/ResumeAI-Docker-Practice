@@ -4,6 +4,7 @@ WORKDIR /app
 
 COPY . .
 
+# Install dependencies
 RUN npm install --force
 RUN npm install -g typescript
 
