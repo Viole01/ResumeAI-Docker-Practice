@@ -10,3 +10,7 @@ RUN npm install -g typescript
 
 # Build the dist folder to upload
 RUN tsc --build
+
+EXPOSE 4292
+
+CMD ["npm", "run", "start"]
