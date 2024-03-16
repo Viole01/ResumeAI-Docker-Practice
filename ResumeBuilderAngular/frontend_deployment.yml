@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontendbuilder # Name of the deployment in K8s
+spec:
+  selector:
+    matchLabels:
+      app: app_frontend
+  template:
+    metadata:
+      labels:
+        app: app_frontend
+    spec:
+      containers:
+        - name: app_frontend
+          image: <Image>
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 4292
