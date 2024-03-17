@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: app_frontend-svc
+  name: app_backend-svc
 spec:
   type: LoadBalancer
   selector:
-    app: app_frontend
+    app: app_backend
   ports:
     - port: 4292
       targetPort: 4292

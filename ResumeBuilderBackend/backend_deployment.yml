@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontendbuilder # Name of the deployment in K8s
+  name: backendbuilder # Name of the deployment in K8s
 spec:
   selector:
     matchLabels:
-      app: app_frontend
+      app: app_backend
   template:
     metadata:
       labels:
-        app: app_frontend
+        app: app_backend
     spec:
       containers:
-        - name: app_frontend
-          image: <Image>
+        - name: app_backend
+          image: resumeai-resume_backend
           resources:
             limits:
-              memory: "128Mi"
-              cpu: "500m"
+              memory: '128Mi'
+              cpu: '500m'
           ports:
             - containerPort: 4292
