@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  resume_frontend:
+  frontend:
     build:
       context: ./ResumeBuilderAngular
       dockerfile: Dockerfile
@@ -10,9 +10,9 @@ services:
       - 80:80
 
     depends_on:
-      - 'resume_backend'
+      - 'backend'
 
-  resume_backend:
+  backend:
     build:
       context: ./ResumeBuilderBackend
       dockerfile: Dockerfile
